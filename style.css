@@ -61,7 +61,7 @@ input{
 button{
     margin-top: 1rem;
     margin-bottom: 1rem;
-    border: none;
+    /* border: none; */
     /* margin: 10px 2px; */
      padding: 8px 32px;
      border-radius: 0.4rem;
