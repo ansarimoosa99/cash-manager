@@ -8,7 +8,7 @@ body{
     flex-direction:column;
     width: 60vw;
     align-items: center;
-    background: #DDDAD9;
+    background: #B9B5B3;
     padding: 2rem;
     margin : auto;
     border-radius: .4rem;
@@ -46,7 +46,7 @@ th,
 td {
     padding: 0.5rem;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid black;
   }
   
 
