@@ -7,14 +7,25 @@ const noOfNotes = document.querySelectorAll(".no-of-notes");
 const availableNotes = [2000, 500, 100, 20, 10, 5, 1];
 
 checkButton.addEventListener("click", function validateBillandCashAmount(){
-    console.log("fdkjfdf");
+   // console.log("fdkjfdf");
     hideMessage();
-    if(billAmount.value > 0){
-            if(cashGiven.value > billAmount.value){
-                const remainingAmount = cashGiven.value - billAmount.value;
+    var billAmt = Number(billAmount.value);
+    var cashGvn = Number(cashGiven.value);
+    if(billAmt > 0){
+            if(cashGvn > billAmt){
+                //console.log(cashGvn,billAmt);
+                const remainingAmount = cashGvn - billAmt;
+                notesToBePaid(remainingAmount);
+            }
+            else if(cashGvn === billAmt){
+                //console.log(cashGvn, billAmt)
+                showMessage("Nothing to be retured");
+                const remainingAmount = cashGvn - billAmt;
                 notesToBePaid(remainingAmount);
             }
             else{
+               // console.log(cashGvn,billAmt);
+                notesToBePaid(0);
                 showMessage("Do you want to wash dishes?");
             }
     }else{
